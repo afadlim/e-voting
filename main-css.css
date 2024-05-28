@@ -122,7 +122,7 @@ section {
 
 /* Vote */
 #vote {
-  background: #070922;
+  background: #0f1244;
   position: relative;
   z-index: 1;
 }
@@ -156,9 +156,17 @@ section {
 
 /* Result */
 #result {
-  background: #2b021f;
+  background: #0a4967;
   position: relative;
   z-index: 1;
+}
+
+#result .bar {
+  border-radius: 0 20px 20px 0;
+}
+
+#result .item {
+  height: 40px;
 }
 /* End Result */
 
@@ -228,7 +236,7 @@ section {
 /* Laptop */
 @media (max-width: 992px) {
   html {
-    font-size: 95%;
+    font-size: 90%;
   }
 
   #home .arrow img {
@@ -243,7 +251,7 @@ section {
 /* Tablet */
 @media (max-width: 768px) {
   html {
-    font-size: 90%;
+    font-size: 80%;
   }
 
   #home .arrow img {
@@ -259,7 +267,7 @@ section {
 /* Mobile phone */
 @media (max-width: 576px) {
   html {
-    font-size: 80%;
+    font-size: 70%;
   }
 
   #home .arrow img {

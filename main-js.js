@@ -1,5 +1,5 @@
-let dateStart = new Date("2024-05-28T12:00");
-let dateEnd = new Date("2024-05-28T18:00");
+let dateStart = new Date("2024-06-01T06:00");
+let dateEnd = new Date("2024-06-02T18:00");
 
 let progres = 0;
 let y = dateStart.getFullYear();

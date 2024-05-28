@@ -228,7 +228,7 @@ section {
 /* Laptop */
 @media (max-width: 992px) {
   html {
-    font-size: 90%;
+    font-size: 95%;
   }
 
   #home .arrow img {
@@ -243,7 +243,7 @@ section {
 /* Tablet */
 @media (max-width: 768px) {
   html {
-    font-size: 80%;
+    font-size: 90%;
   }
 
   #home .arrow img {
@@ -259,7 +259,7 @@ section {
 /* Mobile phone */
 @media (max-width: 576px) {
   html {
-    font-size: 70%;
+    font-size: 80%;
   }
 
   #home .arrow img {

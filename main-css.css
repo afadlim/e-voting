@@ -1,0 +1,287 @@
+:root {
+  --orange: #bf5b3d;
+  --bg: #0a0a0a;
+  --textshadow: 0 2px 2px rgba(24, 23, 28, 0.5);
+  --textshadow1: 1px 2px 2px rgba(168, 153, 153, 0.3);
+  --cardshadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  --textcolor: #a4a1a1;
+  --worksan: "Work Sans", sans-serif;
+  --exo: "Exo", sans-serif;
+}
+
+.text-orange {
+  color: var(--orange);
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: var(--worksan);
+  color: var(--textcolor);
+}
+
+section {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Home */
+#home {
+  background-image: url(img/bg-home.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+#home::after,
+#vote::after,
+#profile::after,
+#result::after,
+#contact::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* opacity: 0.5; */
+  z-index: -1;
+}
+
+#home h1,
+#home h4,
+#home p {
+  text-shadow: var(--textshadow1);
+}
+
+#home h1 {
+  font-family: var(--exo);
+  font-size: 3.6rem;
+  color: var(--orange);
+}
+
+#home h4 {
+  font-size: 2rem;
+}
+
+#home p {
+  font-size: 1.5rem;
+}
+
+#home .arrow img {
+  width: 64px;
+}
+
+#arrow {
+  animation: 2s upDown infinite;
+}
+
+.simply-countdown > .simply-section {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+/* End Home */
+
+/* Navbar */
+.mynavbar {
+  background-color: #29323c;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  /* backdrop-filter: blur(4px); */
+}
+
+.mynavbar .navbar-brand {
+  font-family: "Sacramento", cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--textcolor);
+}
+
+.mynavbar .nav-link {
+  color: var(--textcolor);
+}
+
+.mynavbar .nav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+/* End Navbar */
+
+#vote,
+#profile,
+#result,
+#contact {
+  padding-top: 5rem;
+}
+
+.title {
+  font-family: var(--exo);
+  font-size: 2.5rem;
+  color: var(--orange);
+  text-shadow: var(--textshadow1);
+}
+
+/* Vote */
+#vote {
+  background: #070922;
+  position: relative;
+  z-index: 1;
+}
+/* End Vote */
+
+/* Profile */
+#profile {
+  background: #011612;
+  position: relative;
+  z-index: 1;
+}
+
+#profile p {
+  font-size: 1.1rem;
+}
+
+#profile .calon {
+  margin-top: 20px;
+}
+
+#profile .calon h3 {
+  font-family: "Sacramento", cursive;
+  font-size: 2.4rem;
+  color: var(--orange);
+}
+
+#profile .calon img {
+  width: 100%;
+}
+/* End Profile */
+
+/* Result */
+#result {
+  background: #2b021f;
+  position: relative;
+  z-index: 1;
+}
+/* End Result */
+
+/* Contact */
+#contact {
+  background: #340909;
+  position: relative;
+  z-index: 1;
+}
+
+.info .alamat {
+  font-size: 1.1rem;
+}
+
+.info .description {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.info .card {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: var(--textcolor);
+  border: 1px solid #999;
+}
+
+.info .card-header {
+  border-bottom: 1px solid #999;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 2.5rem;
+}
+
+.info .card-body {
+  font-size: 1.5rem;
+}
+
+.info .card-footer {
+  border-top: 1px solid #999;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.info a {
+  text-decoration: none;
+  color: var(--textcolor);
+}
+/* End Contact */
+
+/* Footer */
+#footer {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+#footer .footer {
+  min-height: 50px;
+}
+
+#footer p {
+  font-size: 1.3rem;
+}
+/* End Footer */
+
+/* Media Query */
+/* Laptop */
+@media (max-width: 1200px) {
+}
+
+/* Laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+
+  #home .arrow img {
+    width: 50px;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 50px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+
+  #home .arrow img {
+    width: 40px;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 40px;
+    margin: 5px;
+  }
+}
+
+/* Mobile phone */
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+
+  #home .arrow img {
+    width: 30px;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 30px;
+    margin: 3px;
+  }
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

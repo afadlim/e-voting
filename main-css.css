@@ -319,6 +319,7 @@ section::after {
 
   p {
     font-size: 1.3rem;
+    text-align: center;
   }
 }
 /* End Footer */

@@ -152,7 +152,7 @@ section::after {
       border-radius: 20px 0px 20px 0px;
       background: var(--orange);
       font-size: 1.6rem;
-      font-weight: 500;
+      font-weight: 600;
       align-content: center;
     }
   }
@@ -253,6 +253,7 @@ section::after {
     border-radius: 6px;
     background: transparent;
     padding: 2px;
+    display: flex;
 
     .level {
       border-radius: 3px;

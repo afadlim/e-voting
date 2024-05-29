@@ -1,5 +1,5 @@
 :root {
-  --orange: #bf5b3d;
+  --orange: #ba583a;
   --bg: #0a0a0a;
   --textshadow: 0 2px 2px rgba(24, 23, 28, 0.5);
   --textshadow1: 1px 2px 2px rgba(168, 153, 153, 0.3);
@@ -24,20 +24,7 @@ section {
   position: relative;
 }
 
-/* Home */
-#home {
-  background-image: url(img/bg-home.png);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  z-index: 1;
-}
-
-#home::after,
-#vote::after,
-#profile::after,
-#result::after,
-#contact::after {
+section::after {
   content: "";
   position: absolute;
   left: 0;
@@ -48,63 +35,6 @@ section {
   /* opacity: 0.5; */
   z-index: -1;
 }
-
-#home h1,
-#home h4,
-#home p {
-  text-shadow: var(--textshadow1);
-}
-
-#home h1 {
-  font-family: var(--exo);
-  font-size: 3.6rem;
-  color: var(--orange);
-}
-
-#home h4 {
-  font-size: 2rem;
-}
-
-#home p {
-  font-size: 1.5rem;
-}
-
-#home .arrow img {
-  width: 64px;
-}
-
-#arrow {
-  animation: 2s upDown infinite;
-}
-
-.simply-countdown > .simply-section {
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
-}
-/* End Home */
-
-/* Navbar */
-.mynavbar {
-  background-color: #29323c;
-  /* background-color: rgba(255, 255, 255, 0.5); */
-  /* backdrop-filter: blur(4px); */
-}
-
-.mynavbar .navbar-brand {
-  font-family: "Sacramento", cursive;
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--textcolor);
-}
-
-.mynavbar .nav-link {
-  color: var(--textcolor);
-}
-
-.mynavbar .nav-link:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-}
-/* End Navbar */
 
 #vote,
 #profile,
@@ -120,11 +50,159 @@ section {
   text-shadow: var(--textshadow1);
 }
 
+.card {
+  border-radius: 20px;
+  box-shadow: var(--cardshadow);
+}
+
+/* Home */
+#home {
+  background-image: url(img/bg-home.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+
+  h1,
+  h4,
+  p {
+    text-shadow: var(--textshadow1);
+  }
+
+  h1 {
+    font-family: var(--exo);
+    font-size: 3.6rem;
+    color: var(--orange);
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .arrow img {
+    width: 64px;
+  }
+
+  #arrow {
+    animation: 2s upDown infinite;
+  }
+}
+/* End Home */
+
+/* Navbar */
+.mynavbar {
+  background-color: #29323c;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  /* backdrop-filter: blur(4px); */
+
+  .navbar-brand {
+    font-family: cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--textcolor);
+  }
+
+  .nav-link {
+    color: var(--textcolor);
+  }
+
+  .nav-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+  }
+}
+/* End Navbar */
+
 /* Vote */
 #vote {
   background: #0f1244;
   position: relative;
   z-index: 1;
+
+  .card {
+    font-size: medium;
+    background: rgba(255, 255, 255, 0.7);
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 200px 200px 70px;
+    grid-template-areas: "image" "text" "button";
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+  }
+
+  .card-image {
+    grid-area: image;
+
+    .nomor {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      border-radius: 20px 0px 20px 0px;
+      background: var(--orange);
+      font-size: 1.6rem;
+      font-weight: 500;
+      align-content: center;
+    }
+  }
+
+  .card-text {
+    grid-area: text;
+  }
+
+  .card-text h4 {
+    font-family: var(--exo);
+    color: var(--orange);
+    text-shadow: var(--textshadow1);
+  }
+
+  .card-text h2 {
+    font-family: var(--exo);
+    text-shadow: var(--textshadow);
+  }
+
+  .card-button {
+    grid-area: button;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    background: var(--orange);
+  }
+
+  .card-button .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card-button .button input[type="button"] {
+    padding: 8px 20px;
+    outline: none;
+    border: none;
+    background: rgb(211, 208, 208);
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+  }
+
+  .card-button .button input[type="button"]:hover {
+    background: rgb(255, 230, 1);
+  }
 }
 /* End Vote */
 
@@ -133,24 +211,24 @@ section {
   background: #011612;
   position: relative;
   z-index: 1;
-}
 
-#profile p {
-  font-size: 1.1rem;
-}
+  .calon {
+    margin-top: 20px;
 
-#profile .calon {
-  margin-top: 20px;
-}
+    p {
+      font-size: 1.1rem;
+    }
 
-#profile .calon h3 {
-  font-family: "Sacramento", cursive;
-  font-size: 2.4rem;
-  color: var(--orange);
-}
+    h3 {
+      font-family: cursive;
+      font-size: 2.4rem;
+      color: var(--orange);
+    }
 
-#profile .calon img {
-  width: 100%;
+    img {
+      width: 100%;
+    }
+  }
 }
 /* End Profile */
 
@@ -159,14 +237,33 @@ section {
   background: #0a4967;
   position: relative;
   z-index: 1;
-}
 
-#result .bar {
-  border-radius: 0 20px 20px 0;
-}
+  .item {
+    height: 40px;
+    color: var(--textcolor);
 
-#result .item {
-  height: 40px;
+    .nomor {
+      width: 15px;
+    }
+  }
+
+  .bar {
+    border: 1px solid #999;
+    /* border-radius: 6px 30px 30px 6px; */
+    border-radius: 6px;
+    background: transparent;
+    padding: 2px;
+
+    .level {
+      border-radius: 3px;
+      background: green;
+    }
+  }
+
+  td {
+    color: var(--textcolor);
+    background: transparent;
+  }
 }
 /* End Result */
 
@@ -175,56 +272,54 @@ section {
   background: #340909;
   position: relative;
   z-index: 1;
-}
 
-.info .alamat {
-  font-size: 1.1rem;
-}
+  .info {
+    .description {
+      font-size: 1rem;
+      font-weight: 300;
+    }
 
-.info .description {
-  font-size: 1rem;
-  font-weight: 300;
-}
+    .card {
+      background-color: rgba(255, 255, 255, 0.2) !important;
+      color: var(--textcolor);
+    }
 
-.info .card {
-  background-color: rgba(255, 255, 255, 0.2) !important;
-  color: var(--textcolor);
-  border: 1px solid #999;
-}
+    .card-header {
+      border-bottom: 1px solid #999;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-size: 2.5rem;
+    }
 
-.info .card-header {
-  border-bottom: 1px solid #999;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-size: 2.5rem;
-}
+    .card-body {
+      font-size: 1.5rem;
+    }
 
-.info .card-body {
-  font-size: 1.5rem;
-}
+    .card-footer {
+      border-top: 1px solid #999;
+      font-size: 1.3rem;
+      font-weight: 300;
+    }
 
-.info .card-footer {
-  border-top: 1px solid #999;
-  font-size: 1.3rem;
-  font-weight: 300;
-}
-
-.info a {
-  text-decoration: none;
-  color: var(--textcolor);
+    a {
+      text-decoration: none;
+      color: var(--textcolor);
+    }
+  }
 }
 /* End Contact */
 
 /* Footer */
 #footer {
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-}
-#footer .footer {
-  min-height: 50px;
-}
 
-#footer p {
-  font-size: 1.3rem;
+  .footer {
+    min-height: 50px;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
 }
 /* End Footer */
 
@@ -236,7 +331,7 @@ section {
 /* Laptop */
 @media (max-width: 992px) {
   html {
-    font-size: 80%;
+    font-size: 85%;
   }
 
   #home .arrow img {
@@ -251,7 +346,7 @@ section {
 /* Tablet */
 @media (max-width: 768px) {
   html {
-    font-size: 70%;
+    font-size: 75%;
   }
 
   #home .arrow img {
@@ -267,7 +362,7 @@ section {
 /* Mobile phone */
 @media (max-width: 576px) {
   html {
-    font-size: 60%;
+    font-size: 65%;
   }
 
   #home .arrow img {

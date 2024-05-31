@@ -58,12 +58,12 @@ section::after {
 /* Home */
 #home {
   /* background-image: url(img/bg-home.png); */
-  background: rgb(40, 42, 22);
-  background: linear-gradient(
+  background: rgb(43, 40, 1);
+  /* background: linear-gradient(
     to bottom right,
     rgb(40, 42, 22),
     rgb(124, 138, 72)
-  );
+  ); */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -195,18 +195,18 @@ section::after {
     flex-direction: column;
   }
 
-  .card-button .button input[type="button"] {
+  .card-button .btn {
     padding: 8px 20px;
     outline: none;
     border: none;
-    background: rgb(211, 208, 208);
+    background: rgb(63, 194, 63);
     border-radius: 20px;
     font-size: 16px;
     cursor: pointer;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
   }
 
-  .card-button .button input[type="button"]:hover {
+  .card-button .btn:hover {
     background: rgb(255, 230, 1);
   }
 }
